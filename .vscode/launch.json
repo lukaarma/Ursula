@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "debug Ursula",
+        "type": "firefox",
+        "request": "launch",
+        "profile": "addonDebug",
+        "keepProfileChanges": true,
+        "reAttach": true,
+        "firefoxArgs": [
+            "https://ariel.unimi.it"
+        ],
+        "url": "about:debugging#/runtime/this-firefox",
+        "addonPath": "${workspaceFolder}/dist",
+    }]
+}

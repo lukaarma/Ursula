@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "Ursula",
+    "description": "Download tool designed to work on the Ariel platform",
+    "version": "0.0.1",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ursula@lukaarma.dev"
+        }
+    },
+    "icons": {
+        "48": "icons/logo.svg",
+        "64": "icons/logo.svg",
+        "96": "icons/logo.svg"
+    },
+    "background": {
+        "scripts": [
+            "browser-polyfill.min.js",
+            "types.js",
+            "downloader.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "Ursula",
+        "default_popup": "popup/interface.html"
+    },
+    "permissions": [
+        "unlimitedStorage",
+        "downloads"
+    ],
+    "content_scripts": [{
+        "matches": ["https://*.ariel.ctu.unimi.it/*"],
+        "js": [
+            "browser-polyfill.min.js",
+            "types.js",
+            "ursula.js"
+        ]
+    }]
+}
