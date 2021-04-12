@@ -100,8 +100,7 @@ async function download(): Promise<void> {
                 }
 
 
-                downloadUrl = URL.createObjectURL(new Blob(videoParts));
-                downloadId = await browser.downloads.download({
+                downloadUrl = URL.createObjectURL(new Blob(videoParts, {type : 'video/mp4'}));                downloadId = await browser.downloads.download({
                     url: downloadUrl,
                     filename: video.filename
                 });
