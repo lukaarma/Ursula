@@ -44,7 +44,3 @@ function createDownload(event: MouseEvent): void {
 
 console.log('Ursula loaded!');
 findVideos();
-
-
-// TODO: remove me before release!
-document.body.style.border = '5px solid red';
